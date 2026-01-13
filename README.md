@@ -2,12 +2,15 @@
 
 This is a simple WiFi Analyzer application built using Python and Tkinter.
 
+
+
 ## Features
-- Scan available WiFi networks (Windows)
-- Test network quality using ping
-- Calculate packet loss and latency
-- Display a basic network rating
-- Provide suggestions to improve WiFi performance
+- Detects the currently connected WiFi network
+- Tests network quality using latency and packet loss
+- Provides a simple network rating (Poor / Fair / Good / Excellent)
+- Displays the WiFi security type
+- Suggests practical ways to improve WiFi performance and security
+
 
 ## Requirements
 - Windows OS
