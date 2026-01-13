@@ -26,8 +26,12 @@ def get_connected_wifi():
     security = None
 
     for line in output.split("\n"):
-        if "SSID" in line and ":" in line:
+        line = line.strip()
+
+        # IMPORTANT: ignore BSSID, only take SSID
+        if line.startswith("SSID") and "BSSID" not in line:
             ssid = line.split(":", 1)[1].strip()
+
         if "Authentication" in line:
             security = line.split(":", 1)[1].strip()
 
