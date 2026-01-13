@@ -1,7 +1,4 @@
-# =====================================
-# WIFI ANALYZER - WINDOWS
-# (Improved 1st Year BTech Version)
-# =====================================
+
 
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
@@ -9,9 +6,9 @@ import subprocess
 from ping3 import ping
 import statistics
 
-# -------------------------
+
 # Scan WiFi Networks
-# -------------------------
+
 def scan_wifi():
     try:
         output = subprocess.check_output(
@@ -42,9 +39,9 @@ def scan_wifi():
     return networks
 
 
-# -------------------------
+
 # Network Quality Test
-# -------------------------
+-
 def test_network():
     delays = []
     lost = 0
@@ -77,9 +74,9 @@ def get_rating(avg, loss):
     return "⭐⭐ Fair", "May face issues in video calls or gaming"
 
 
-# -------------------------
+
 # Improvement Suggestions
-# -------------------------
+
 def suggestions(avg, loss, security):
     tips = []
 
@@ -100,9 +97,9 @@ def suggestions(avg, loss, security):
     return tips
 
 
-# -------------------------
+
 # GUI FUNCTIONS
-# -------------------------
+
 def run_scan():
     tree.delete(*tree.get_children())
     nets = scan_wifi()
@@ -151,9 +148,9 @@ def run_test():
         output.insert(tk.END, f"• {t}\n")
 
 
-# -------------------------
+
 # GUI SETUP
-# -------------------------
+
 root = tk.Tk()
 root.title("WiFi Analyzer")
 root.geometry("860x560")
@@ -195,3 +192,4 @@ output = scrolledtext.ScrolledText(
 output.pack(fill="both", padx=15, pady=10)
 
 root.mainloop()
+
